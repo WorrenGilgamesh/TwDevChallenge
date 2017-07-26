@@ -104,7 +104,24 @@ router.get('/csv', function(req, res, next) {
 
             async.map(datosTw, watsonUse, function(err, results){
             	var csv = json2csv({ data: results });
-            	fs.createWriteStream('file.csv', csv).pipe(res.sendFile);
+            	fs.writeFile('routes/test.csv', csv, function(err) {
+		        if (err) throw err;
+		        console.log('file saved');
+
+		        var options = {
+		            root: __dirname
+		        };
+
+		        res.sendFile('test.csv', options, function (err) {
+		            if (err) {
+		                console.log(err);
+		                res.status(err.status).end();
+		            }
+		            else {
+		                console.log('Sent:', fileName);
+		            }
+		        });
+		    });
   				
             })
         }
