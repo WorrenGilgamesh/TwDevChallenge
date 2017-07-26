@@ -118,7 +118,7 @@ router.get('/csv', function(req, res, next) {
 		                res.status(err.status).end();
 		            }
 		            else {
-		                console.log('Sent:', fileName);
+		                
 		            }
 		        });
 		    });
