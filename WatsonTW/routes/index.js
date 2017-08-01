@@ -32,7 +32,7 @@ var retweet = function() {
   var params = {
     q: '#nodejs, #Nodejs',
     result_type: 'recent',
-    lang: 'en'    
+    lang: 'en' 
   }
   
 }
@@ -50,7 +50,9 @@ router.get('/analizar', function(req, res, next) {
 	 var params = {
     q: req.param("nombre"),
     result_type: 'recent',
-    lang: 'en'    
+    sentences:'true',
+    lang: 'en',
+    count: 100
   }
 
   	Twitter.get('search/tweets', params, function(err, data) {
@@ -58,6 +60,7 @@ router.get('/analizar', function(req, res, next) {
         // if there no errors
         if (!err) {
           // grab ID of tweet to retweet
+          console.log(data.statuses.length);
             var datosTw = data.statuses.map(function(tweet){
             	return {text:tweet.text}
             })
