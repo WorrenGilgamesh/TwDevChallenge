@@ -1,0 +1,13 @@
+Consumer Key (API Key)	bJLV00lnvrfId1yvnjSJnFiE1
+Consumer Secret (API Secret)	LcvadEWICtEHzbGtpv1ucM7rD6j6zINTrdUeQil4S73klGpV0x
+
+Access Token	298849299-6Zn2bJwQWhKlYc6ZvK14bGwqVz6oOa8J971SxPGl
+Access Token Secret	qqIbfPdzEsqVPQFlluSU1Gp3O1XkclsTjqAGkKDt5HzjY
+
+
+
+{
+  "url": "https://gateway.watsonplatform.net/tone-analyzer/api",
+  "username": "c62bcc65-a25f-4f0b-8a80-c3086b883bd1",
+  "password": "AQBPSxO4aZCu"
+}

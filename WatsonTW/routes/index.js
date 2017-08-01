@@ -52,7 +52,7 @@ router.get('/analizar', function(req, res, next) {
     result_type: 'recent',
     sentences:'true',
     lang: 'en',
-    count: 100
+    count: 50
   }
 
   	Twitter.get('search/tweets', params, function(err, data) {
